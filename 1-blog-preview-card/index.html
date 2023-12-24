@@ -15,25 +15,126 @@
     <title>Frontend Mentor | Blog preview card</title>
 
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Figtree", sans-serif;
+        background-color: #f4d04e;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #121212;
+      }
+
+      .card {
+        max-width: 340px;
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1.5px solid #121212;
+        box-shadow: 4px 4px 1px #121212;
+        background-color: #fff;
+      }
+
+      .card .card__img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      .card__label {
+        display: block;
+        margin: 6px 0;
+        background-color: #f4d04e;
+        border-radius: 6px;
+        padding: 4px 8px;
+        width: 600;
+        width: max-content;
+      }
+
+      .card__published {
+        margin: 10px 0;
+        font-size: 14px;
+        width: 600;
+      }
+
+      .card__title {
+        margin: 6px 0;
+      }
+
+      .card__description {
+        font-size: 14px;
+        width: 600;
+        color: #808080;
+        margin: 6px 0;
+      }
+
+      .card__avatar {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .card__avatar img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+      }
+
+      .card__avatar .person__name {
+        width: 800;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: 40px;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
+      }
+
+      @media (max-width: 375px) {
+        .card__title {
+          font-size: 1.2em;
+        }
       }
     </style>
   </head>
   <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
+    <div class="card">
+      <img src="images/illustration-article.svg" alt="card" class="card__img" />
+      <span class="card__label">Learning</span>
+      <p class="card__published">Published 21 Dec 2023</p>
+      <h2 class="card__title">HTML & CSS foundations</h2>
+      <p class="card__description">
+        These languages are the backbone of every website, defining structure,
+        content, and presentation.
+      </p>
+      <div class="card__avatar">
+        <img src="images/image-avatar.webp" alt="person" />
+        <span class="person__name">Greg Hooper</span>
+      </div>
+    </div>
 
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a
+        href="https://www.frontendmentor.io/profile/aziz-mohammadi"
+        target="_blank"
+        >Aziz Mohammadi</a
+      >.
     </div>
   </body>
 </html>
